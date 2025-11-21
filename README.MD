@@ -1,6 +1,6 @@
 # Wi-Fi Hotspot + Scan Control Scripts
 
-This repository contains two Windows batch scripts that let you manually enable the built-in **Mobile Hotspot** feature and automatically toggle **Wi-Fi network scanning (AutoConfig)** on or off. These scripts are useful when you want to run a stable local hotspot without Windows continuously scanning for networks in the background.
+This repository contains two Windows batch scripts that let you manually enable the built-in **Mobile Hotspot** feature and automatically toggle **Wi-Fi network scanning (AutoConfig)** on or off. These scripts are useful when you want to run a stable local hotspot without Windows continuously scanning for networks in the background. This removes the problems with frequent stuttering caused by the WiFi scanning for VR wireless streaming.
 
 ---
 
@@ -37,6 +37,19 @@ Restore Windows to normal Wi-Fi operation after hotspot use.
 - Must **Run as Administrator**  
   - Right-click the `.bat` file → **Run as administrator**
 
-### **To Start Hotspot & Disable Scanning**
-Run:
+---
+## 🛑 Limitations
 
+- Windows Hosted Network (netsh wlan start hostednetwork) is deprecated.
+
+- Scripts rely on Mobile Hotspot UI instead.
+
+- You must manually toggle hotspot state.
+
+- Scripts cannot force hotspot ON/OFF due to Windows API limitations.
+
+---
+
+## 📄 License
+
+MIT License. Free to modify or redistribute.
